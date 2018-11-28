@@ -1,14 +1,25 @@
 <!-- Fixed navbar -->
-<nav class="navbar navbar-default navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Alpha Blog - RoR Course</a>
+      <%= link_to "Alpha Blog", root_path, class: "navbar-brand", id: "logo" %>
     </div>
     <div id="navbar" class="container">
       <ul class="nav navbar-nav">
-        <li class="nav-item"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
-        <li class="nav-item"><%= link_to 'Alpha Blog', articles_path, class: 'nav-link' %></li>
-        <li class="nav-item active"><%= link_to 'About', about_path, class: 'nav-link' %></li>
+        <!-- <li class="nav-item"><%= link_to 'Home', root_path, class: 'nav-link' %></li> -->
+        <li class="nav-item"><%= link_to 'Articles', articles_path, class: 'nav-link' %></li>
+        <!-- <li class="nav-item"><%= link_to 'About', about_path, class: 'nav-link' %></li> -->
+        <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Actions
+         </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <%= link_to 'New Article', new_article_path, class: 'dropdown-item' %>
+           <a class="dropdown-item" href="#">Another action</a>
+           <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#">Something else here</a>
+         </div>
+       </li>
       </ul>
     </div>
   </div><!--/.container-fluid -->
