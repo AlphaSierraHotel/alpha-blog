@@ -10,7 +10,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <ul class="mb-0">
-          <%= obj.errors.full_messages.each do |msg| %>
+          <% obj.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
         </ul>
