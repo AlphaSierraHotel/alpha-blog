@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
-      <div class="alert alert-danger alert-dismissible fade">
+      <div class="alert alert-danger alert-dismissible show fade">
         <h5 class="alert-heading">
           <%= pluralize(obj.errors.count, "error") %>
           prohibited this article from being saved:
