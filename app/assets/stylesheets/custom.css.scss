@@ -4,14 +4,14 @@
   text-align: center;
 }
 
-.jumbotron {
+#jumbohome {
   background-image: asset-url('cover_page.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.jumbotron h1 {
+#jumbohome h1 {
   color: #fff;
   margin-bottom: 20px;
 }
@@ -34,6 +34,7 @@
 
 footer {
   margin-top: 45px;
+  margin-bottom: 25px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
@@ -55,4 +56,8 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+.debug_dump {
+  margin-bottom: 0;
 }

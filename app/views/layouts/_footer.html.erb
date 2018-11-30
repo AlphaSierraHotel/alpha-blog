@@ -12,3 +12,11 @@
     </nav>
   </footer>
 </div>
+<% if Rails.env.development? %>
+  <hr>
+  <div class="card bg-light w-100">
+    <div class="card-body p-4 mb-1">
+      <%= debug(params) %>
+    </div>
+  </div>
+<% end %>
