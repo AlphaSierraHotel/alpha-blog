@@ -1,0 +1,25 @@
+<h1 class="text-center"> All Alpha Bloggers </h1>
+
+<% @users.each do |user| %>
+  <div class="card mb-5 text-center">
+    <!-- <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap"> -->
+    <%= link_to gravatar_for(user), user_path(user), class: "card-img-top" %>
+    <!-- <div class="card-header">
+      Featured
+    </div> -->
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to user.username, user_path(user) %>
+      </h5>
+      <p class="card-text"><%= pluralize(user.articles.count, "article") if user.articles %></p>
+    </div>
+    <div class="card-footer text-muted">
+      <small>
+        User #<%= user.id %> |
+        Created: <%= user.created_at.in_time_zone("America/Toronto").strftime("%b %d, %Y @ %H:%M") %> |
+        Updated: <%= user.created_at.in_time_zone("America/Toronto").strftime("%b %d, %Y @ %H:%M") %>
+      </small>
+    </div>
+  </div>
+
+<% end %>
