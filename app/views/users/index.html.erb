@@ -1,5 +1,7 @@
 <h1 class="text-center"> All Alpha Bloggers </h1>
-
+<div class="row">
+  <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, :class => "mx-auto") %>
+</div>
 <% @users.each do |user| %>
   <div class="card mb-5 text-center">
     <!-- <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap"> -->
@@ -23,3 +25,6 @@
   </div>
 
 <% end %>
+<div class="row">
+  <%= will_paginate(@articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, :class => "mx-auto") %>
+</div>

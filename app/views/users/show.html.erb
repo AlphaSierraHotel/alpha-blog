@@ -9,4 +9,10 @@
   <%= @user.username %>'s articles
 </h4>
 
-<%= render 'articles/article', obj: @user.articles %>
+<div class="row">
+  <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, :class => "mx-auto") %>
+</div>
+<%= render 'articles/article', obj: @user_articles %>
+<div class="row">
+  <%= will_paginate(@user_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, :class => "mx-auto") %>
+</div>
