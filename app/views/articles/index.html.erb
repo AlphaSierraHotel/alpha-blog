@@ -2,12 +2,12 @@
 
 <% @articles.each do |article| %>
   <div class="row mb-3">
-    <div class="card col-lg-8 offset-lg-2">
-      <div class="card-body">
-        <div class="article-title">
-          <%= link_to article.title, article_path(article) %>
+    <div class="card border-secondary col-8 offset-2">
+      <div class="card-body text-secondary">
+        <div class="card-title">
+          <h5><%= link_to article.title, article_path(article) %></h5>
         </div>
-        <div class="article-body">
+        <div class="card-text">
           <%= truncate(article.description, length: 100) %>
           <div class="article-meta-details">
             <small>
