@@ -1,1 +1,8 @@
-<h1 align="center">Show</h1>
+<h1 class="text-center"><%= "Category: " + @category.name %></h1>
+<div class="row">
+  <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, :class => "mx-auto") %>
+</div>
+<%= render 'articles/article', obj: @category_articles %>
+<div class="row">
+  <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, :class => "mx-auto") %>
+</div>
