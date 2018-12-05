@@ -1,0 +1,13 @@
+<h1 class="center">Listing All Categories</h1>
+
+<% @categories.each do |category| %>
+  <div class="row mb-3">
+    <div class="card bg-light col-6 offset-3">
+      <div class="card-body">
+        <div class="card-text center">
+          <h4><%= link_to "#{category.name}", category_path(category) %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
